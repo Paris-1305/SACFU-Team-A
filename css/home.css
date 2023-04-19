@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 10%;
+}
+.logo img{
+    max-width: 140px;
+    height: auto;
+}
+.navmenu{
+    display: flex;
+}
+.navmenu a{
+    padding: 10px 20px;
+    color: #292929;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 500;
+    transition: all .42s ease;
+}
+.navmenu a:hover{
+    color: #19A7CE;
+}
+
+.nav-icon{
+    display: flex;
+    align-items: center;
+}
+.nav-icon .btn{
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+    border: 2px solid #19A7CE;
+    padding: 10px 30px;
+    background-color: #19A7CE;
+    border-radius: 30px;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-right: 15px;
+    transition: all .42s ease;
+}
+.nav-icon .btn:hover{
+    transform: scale(1.1);
+}
+
+
+#menu-icon{
+    font-size: 35px;
+    color: black;
+    cursor: pointer;
+    display: none;
+    
+}
+section{
+    padding: 60px 12%;
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    background-color: #F7F7F7;
+    background-position: center;
+    display: grid;
+    background-size: cover;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+.home-img img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+.home-text h4{
+    color: #cc3333;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, cursive;
+}
+.home-text h1{
+    font-size: 50px;
+    color: #292929;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 23px 0;
+}
+.home-text h1 span{
+    color: #cc3333;
+    text-decoration: underline;
+}
+.home-text  p{
+   color: #200101;
+   font-size: 15px;
+   line-height: 25px;
+   font-weight: 400;
+   margin-bottom: 40px;
+}
+.main-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+ .main-btn .btn-1{
+    display: inline-block;
+    color: #fff;
+    font-size: 15px;
+    text-transform: capitalize;
+    background-color: #19A7CE;
+    padding: 12px 30px;
+    transition: all .42s ease;
+ }
+ .main-btn .btn-1:hover{
+    background-color: #200101;
+ }
+ .btn-2{
+    font-size: 15px;
+    font-weight: 500;
+    color: #292929;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+ }
+ .btn-2 span i{
+    height: 50px;
+    width: 50px;
+    background: #19A7CE;
+    color: #fff;
+    font-size: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 15px;
+    transition: all .42s ease;
+ }
+ .btn-2 span i:hover{
+    transform: translateY(-5px);
+ }
+
+  /*Responsive section*/
+
+    @media(max-width:945px){
+        header{
+            padding: 20px 3%;
+            transition: .3s;
+        }
+    }
+    @media(max-width:1140px){
+        .home{
+            grid-template-columns: 1fr;
+            height: 100%;
+        }
+        header.sticky{
+            background: #fff;
+            padding: 10px 3%;
+            box-shadow: 0 0 10px rgba(0 0 0/ 10%);
+        }
+        .home-text{
+            padding: 50px;
+            text-align: center;
+        }
+        section{
+            padding: 90px 3%;
+        }
+        .home-img img{
+            width: 100%;
+            max-height: 600px;
+        }
+        .home-img{
+            text-align: center;
+        }
+    }
+    @media(max-width:855px){
+        #menu-icon{
+            display: block;
+        }
+        .navmenu{
+            position: absolute;
+            top: 100%;
+            right: -100%;
+            width: 300px;
+            height: 400px;
+           background-color: #19A7CE ;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 90px 30px;
+            transition: all .42s ease;
+        }
+        .navmenu a{
+            display: block;
+            margin: 5px 5px;
+            transition: all .42s ease;
+        }
+        .navmenu a:hover{
+            color: white;
+            transform: translateX(-5px);
+        } 
+        .navmenu.open{
+            right: 0;
+        }
+    }
